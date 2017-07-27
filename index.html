@@ -3,3 +3,10 @@ layout: default
 title: 我的Blog
 ---
 <p>Hello world</p>
+<p>This is the index page</p>
+<p>My post list:</p>
+<ul>
+	{% for post in site.posts %}
+		<li><a href="{{  site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
